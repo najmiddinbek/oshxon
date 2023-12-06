@@ -93,14 +93,11 @@ export default function AddTopic() {
       <select className="border border-slate-800 py-2 px-3" onChange={(e) => setTitle(e.target.value)} value={title}>
         <option>Tanlang</option>
         {taomlar.map((ovqat, id) => (
-          <option>{ovqat.taom}</option>
+          <option key={id}>{ovqat.taom}</option>
         ))}
 
       </select>
-      {/* setSelectedFood
-      {taomlar.map((ovqat, id) => (
-        <option>{ovqat.narxi}</option>
-      ))} */}
+
 
 
       <select className="border border-slate-800 py-2 px-3" onChange={(e) => setDescription(e.target.value)}>
